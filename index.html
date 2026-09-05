@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Portfolio | Software Engineer & Creative Technologist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .visual-card:hover .visual-overlay { opacity: 1; }
+    .project-visual img, .project-visual video { transition: transform 0.3s ease; }
+    .visual-card:hover .project-visual img, .visual-card:hover .project-visual video { transform: scale(1.03); }
+    .group:hover .tooltip-content { opacity: 1; pointer-events: auto; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-bold text-xl tracking-tight text-white">Showcase<span class="text-cyan-500">.</span></a>
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#value" class="hover:text-cyan-400 transition">Why Hire Me</a>
+        <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="pt-32 pb-20 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 min-h-screen items-center">
+    <!-- Left Column: Intro -->
+    <div class="flex flex-col items-start gap-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-xs font-semibold uppercase tracking-wider w-fit mb-4">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Open for Opportunities
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        Software Engineer & <span class="text-cyan-400">Generative AI Specialist</span>
+      </h1>
+      <p class="text-lg text-slate-400 max-w-2xl mb-2">
+        📍 Depok, Jawa Barat
+      </p>
+      <blockquote class="my-4 p-4 border-l-4 border-cyan-500 bg-slate-900/60 rounded-r-lg italic text-slate-300 text-base sm:text-lg max-w-2xl">
+        "Bridging technical logic, cutting-edge Generative AI, SEO optimization, and high-conversion live communication to build memorable digital experiences."
+      </blockquote>
+      <div class="flex flex-wrap gap-4 mt-2">
+        <a href="#contact" class="px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition shadow-lg shadow-cyan-600/25">
+          Let's Connect
+        </a>
+        <a href="#projects" class="px-6 py-3 rounded-lg border border-slate-700 hover:bg-slate-900 text-slate-300 font-medium transition">
+          View Projects
+        </a>
+      </div>
+    </div>
+    
+    <!-- Right Column: Profile Picture -->
+    <div class="p-2 bg-slate-900/60 border border-slate-800 rounded-2xl max-w-sm mx-auto md:w-full aspect-[3/4] overflow-hidden shadow-2xl shadow-cyan-500/10 transition hover:border-cyan-500/50">
+      <img src="fp.png" alt="Profile Portrait" class="w-full h-full object-cover object-top rounded-xl">
+    </div>
+  </header>
+
+  <!-- About / Executive Summary -->
+  <section id="about" class="py-16 border-t border-slate-800/60 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+        <span class="text-cyan-500">01.</span> Executive Summary
+      </h2>
+      <p class="text-slate-300 leading-relaxed text-lg max-w-4xl">
+        I am a versatile <strong>Software Engineer and Creative Technologist</strong> combining strong software development skills with expertise in <strong>SEO optimization and live commerce marketing</strong>. Experienced in engineering rule-based expert systems in Java, scripting mechanics in Lua, driving organic web traffic growth, and hosting interactive live sales broadcasts that convert viewers into active clients.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Matrix -->
+  <section id="skills" class="py-16 border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+        <span class="text-cyan-500">02.</span> Core Competencies
+      </h2>
+      <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/60">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-900 text-slate-200 uppercase text-xs tracking-wider border-b border-slate-800">
+            <tr>
+              <th class="p-4">Skill Category</th>
+              <th class="p-4">Expertise & Tools</th>
+              <th class="p-4">Key Deliverables & Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr class="hover:bg-slate-900/40">
+              <td class="p-4 font-semibold text-white">Software Engineering</td>
+              <td class="p-4 group relative cursor-pointer">
+                <span class="border-b border-dashed border-cyan-500/50">Java (OOP), Expert Systems, Forward Chaining, PHP, MySQL</span>
+                <span class="tooltip-content absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-3 bg-slate-900 border border-cyan-500/40 rounded-lg text-slate-300 text-xs shadow-xl min-w-[250px] z-10 opacity-0 pointer-events-none transition-opacity">
+                  <strong class="text-cyan-400">Tools:</strong> NetBeans, BlueJ, MySQL Database Design<br>
+                  <strong class="text-cyan-400">Techniques:</strong> Forward Chaining inference, OOP architecture.
+                </span>
+              </td>
+              <td class="p-4">Fault Diagnosis Systems, Desktop Applications, Database Systems</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40">
+              <td class="p-4 font-semibold text-white">Digital Marketing & SEO</td>
+              <td class="p-4 group relative cursor-pointer">
+                <span class="border-b border-dashed border-cyan-500/50">On-Page/Off-Page SEO, Keyword Research, Marketplace Catalog Optimization</span>
+                <span class="tooltip-content absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-3 bg-slate-900 border border-cyan-500/40 rounded-lg text-slate-300 text-xs shadow-xl min-w-[250px] z-10 opacity-0 pointer-events-none transition-opacity">
+                  <strong class="text-cyan-400">Experience:</strong> 1 Year at JURAGAN SEO<br>
+                  <strong class="text-cyan-400">Focus:</strong> Google Search Ranking, Marketplace Growth, Content Marketing Strategy.
+                </span>
+              </td>
+              <td class="p-4">Higher Search Rankings, Increased Organic Traffic & Qualified Leads</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40">
+              <td class="p-4 font-semibold text-white">Game Development</td>
+              <td class="p-4 group relative cursor-pointer">
+                <span class="border-b border-dashed border-cyan-500/50">Lua, Roblox Studio API, Game Mechanics Scripting</span>
+                <span class="tooltip-content absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-3 bg-slate-900 border border-cyan-500/40 rounded-lg text-slate-300 text-xs shadow-xl min-w-[250px] z-10 opacity-0 pointer-events-none transition-opacity">
+                  <strong class="text-cyan-400">API:</strong> Roblox Studio API, Event handling<br>
+                  <strong class="text-cyan-400">Techniques:</strong> Modular scripts, dynamic UI binding.
+                </span>
+              </td>
+              <td class="p-4">Interactive Teleportation Systems, Custom Map Builds, Server-Side Triggers</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40">
+              <td class="p-4 font-semibold text-white">Generative AI</td>
+              <td class="p-4 group relative cursor-pointer">
+                <span class="border-b border-dashed border-cyan-500/50">Prompt Engineering, Hyper-Realistic Image Synthesis, Video AI Prompts</span>
+                <span class="tooltip-content absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-3 bg-slate-900 border border-cyan-500/40 rounded-lg text-slate-300 text-xs shadow-xl min-w-[250px] z-10 opacity-0 pointer-events-none transition-opacity">
+                  <strong class="text-cyan-400">Techniques:</strong> Parameter tuning, character consistency, video synthesis workflows.
+                </span>
+              </td>
+              <td class="p-4">Consistent Character Design, Photorealistic Visuals, Concept Art Engineering</td>
+            </tr>
+            <tr class="hover:bg-slate-900/40">
+              <td class="p-4 font-semibold text-white">Live Commerce & Hosting</td>
+              <td class="p-4 group relative cursor-pointer">
+                <span class="border-b border-dashed border-cyan-500/50">Live Shopping Hosting, Sales Scripts, Audience Retention Metrics</span>
+                <span class="tooltip-content absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-3 bg-slate-900 border border-cyan-500/40 rounded-lg text-slate-300 text-xs shadow-xl min-w-[250px] z-10 opacity-0 pointer-events-none transition-opacity">
+                  <strong class="text-cyan-400">Experience:</strong> KMARKET CORNER & Interactive Sales<br>
+                  <strong class="text-cyan-400">Focus:</strong> Real-time Flash Sales, Retention, GMV Optimization.
+                </span>
+              </td>
+              <td class="p-4">Increased Viewer Retention, High Sales Conversion & GMV Growth</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="py-16 border-t border-slate-800/60 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+        <span class="text-cyan-500">03.</span> Professional Experience
+      </h2>
+
+      <div class="space-y-6">
+        <!-- Experience 1: JURAGAN SEO -->
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Internet Marketing / Digital Marketing Specialist</h3>
+              <p class="text-cyan-400 font-medium">JURAGAN SEO</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-3 py-1 rounded-full mt-2 md:mt-0 border border-slate-700">
+              January 2022 – December 2022
+            </span>
+          </div>
+          <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
+            <li>Managed and optimized multi-channel marketplace product catalogs to enhance brand visibility and increase sales transaction volume.</li>
+            <li>Conducted in-depth keyword research and implemented on-page SEO best practices to elevate website rankings on Google search results.</li>
+            <li>Created and distributed strategic marketing content to boost user engagement and generate qualified business leads.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-cyan-400">
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">On-Page SEO</span>
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Keyword Research</span>
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Marketplace Optimization</span>
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Lead Generation</span>
+          </div>
+        </div>
+
+        <!-- Experience 2: KMARKET CORNER -->
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white">Live Streamer Host</h3>
+              <p class="text-cyan-400 font-medium">KMARKET CORNER</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400 bg-slate-800 px-3 py-1 rounded-full mt-2 md:mt-0 border border-slate-700">
+              May 2026 – August 2026
+            </span>
+          </div>
+          <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
+            <li>Hosted interactive live shopping sessions, persuasively highlighting product value propositions to maximize viewer retention and drive sales conversion.</li>
+            <li>Developed audience-trend-driven promotional scripts and executed real-time sales tactics, including flash sales and compelling call-to-action (CTA) strategies.</li>
+            <li>Analyzed live broadcast metrics (viewer engagement, average watch time, and GMV) to optimize sales performance for subsequent sessions.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-cyan-400">
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Live Commerce</span>
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Audience Retention</span>
+            <span class="bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">GMV Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section id="projects" class="py-16 border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+        <span class="text-cyan-500">04.</span> Featured Projects
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Project 1: Diagnostic System -->
+        <div class="visual-card bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition flex flex-col">
+          <div class="w-full aspect-video overflow-hidden border-b border-slate-800 project-visual relative bg-slate-950">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="motow.mp4" type="video/mp4">
+              <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&h=675&auto=format&fit=crop" alt="Motorcycle Fault Diagnostic System">
+            </video>
+            <div class="visual-overlay absolute inset-0 bg-slate-950/80 p-4 flex flex-col justify-center items-center opacity-0 transition-opacity">
+              <span class="text-cyan-400 text-xs font-mono mb-2">View Demo Flowchart</span>
+              <i class="fa-solid fa-diagram-project text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Java & Expert Systems</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Motorcycle Injection Fault Diagnostic System</h3>
+              <p class="text-slate-400 text-sm mb-4">Diagnoses technical faults in fuel-injected Beat motorcycles using a rule-based forward chaining inference engine.</p>
+              <ul class="text-sm text-slate-300 space-y-1.5 mb-6 list-disc list-inside">
+                <li>Structured IF-THEN rules for automated diagnosis.</li>
+                <li>Real-time troubleshooting recommendations.</li>
+                <li>User-friendly interface for technicians & riders.</li>
+              </ul>
+            </div>
+            <div class="text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/80">Tech: Java, Forward Chaining, NetBeans</div>
+          </div>
+        </div>
+
+        <!-- Project 2: Roblox Lua -->
+        <div class="visual-card bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition flex flex-col">
+          <div class="w-full aspect-video overflow-hidden border-b border-slate-800 project-visual relative bg-slate-950">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="roblox.mp4" type="video/mp4">
+              <img src="https://www.tiktok.com/@natan.ezzz/video/7562891268527885575" alt="Roblox Game Preview">
+            </video>
+            <div class="visual-overlay absolute inset-0 bg-slate-950/80 p-4 flex flex-col justify-center items-center opacity-0 transition-opacity">
+              <span class="text-cyan-400 text-xs font-mono mb-2">Play Map Demo</span>
+              <i class="fa-solid fa-gamepad text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Lua & Game Scripting</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Interactive Roblox Map & Scripting Architecture</h3>
+              <p class="text-slate-400 text-sm mb-4">Custom climbing traversal gameplay mechanics with modular Lua scripts and automated server triggers.</p>
+              <ul class="text-sm text-slate-300 space-y-1.5 mb-6 list-disc list-inside">
+                <li>Modular player teleportation & custom titles.</li>
+                <li>Dynamic UI binding and event handling.</li>
+                <li>Managed community admin & moderator guidelines.</li>
+              </ul>
+            </div>
+            <div class="text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/80">Tech: Lua, Roblox Studio API</div>
+          </div>
+        </div>
+
+        <!-- Project 3: Gen-AI Pipeline -->
+        <div class="visual-card bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition flex flex-col">
+          <div class="w-full aspect-video overflow-hidden border-b border-slate-800 project-visual relative bg-slate-950">
+            <img src="https://images.unsplash.com/photo-1627663475945-812e12e75a31?q=80&w=1200&h=675&auto=format&fit=crop" alt="AI Generated Concept Art" class="w-full h-full object-cover">
+            <div class="visual-overlay absolute inset-0 bg-slate-950/80 p-4 flex flex-col justify-center items-center opacity-0 transition-opacity">
+              <span class="text-cyan-400 text-xs font-mono mb-2">View Prompt Pipeline</span>
+              <i class="fa-solid fa-wand-magic-sparkles text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Generative AI Pipeline</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Precision Gen-AI Visual Pipeline & Concept Synthesis</h3>
+              <p class="text-slate-400 text-sm mb-4">Systematic prompt architectures to produce studio-grade, hyper-realistic conceptual visual rendering.</p>
+              <ul class="text-sm text-slate-300 space-y-1.5 mb-6 list-disc list-inside">
+                <li>Fine-tuned lighting, focal length, textures.</li>
+                <li>Multi-frame consistent character design.</li>
+                <li>Optimized for video AI and digital marketing.</li>
+              </ul>
+            </div>
+            <div class="text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/80">Tools: Advanced Diffusion Models, Prompt Engineering</div>
+          </div>
+        </div>
+
+        <!-- Project 4: Live Host -->
+        <div class="visual-card bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-cyan-500/50 transition flex flex-col">
+          <div class="w-full aspect-video overflow-hidden border-b border-slate-800 project-visual relative bg-slate-950">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="CIHUY.mp4" type="video/mp4">
+              <img src="https://images.unsplash.com/photo-1540317580384-e5d43867abc6?q=80&w=1200&h=675&auto=format&fit=crop" alt="Live Host Highlight Reel">
+            </video>
+            <div class="visual-overlay absolute inset-0 bg-slate-950/80 p-4 flex flex-col justify-center items-center opacity-0 transition-opacity">
+              <span class="text-cyan-400 text-xs font-mono mb-2">Watch Highlight Reel</span>
+              <i class="fa-solid fa-play text-white text-3xl"></i>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/20">Live Broadcasting & Sales</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">High-Conversion Live Broadcast Hosting & Engagement</h3>
+              <p class="text-slate-400 text-sm mb-4">Managed high-energy live streams, conducted product demos, and maintained real-time retention across platforms.</p>
+              <ul class="text-sm text-slate-300 space-y-1.5 mb-6 list-disc list-inside">
+                <li>Sustained high viewer retention rates.</li>
+                <li>Converted technical product specs into live pitches.</li>
+                <li>Built audience trust through charismatic presence.</li>
+              </ul>
+            </div>
+            <div class="text-xs font-mono text-slate-500 pt-4 border-t border-slate-800/80">Focus: Retention, Live Pitching, Public Speaking</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hire Me -->
+  <section id="value" class="py-16 border-t border-slate-800/60 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+        <span class="text-cyan-500">05.</span> Why Hire Me?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="text-cyan-400 text-2xl mb-4"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Technical & Marketing Synergy</h3>
+          <p class="text-sm text-slate-400">Seamlessly combine technical code development with data-driven SEO growth strategies and engaging live marketing.</p>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="text-cyan-400 text-2xl mb-4"><i class="fa-solid fa-comments"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Proven Communicator</h3>
+          <p class="text-sm text-slate-400">Extensive experience in live commerce hosting guarantees exceptional public speaking and persuasive presentation skills.</p>
+        </div>
+        <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition">
+          <div class="text-cyan-400 text-2xl mb-4"><i class="fa-solid fa-bolt"></i></div>
+          <h3 class="text-lg font-bold text-white mb-2">Target-Driven Mindset</h3>
+          <p class="text-sm text-slate-400">Focused on measurable business outcomes, from web ranking improvements to live stream GMV optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 border-t border-slate-800/60 bg-slate-900/30 text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-extrabold text-white mb-4">Let's Build Something Together</h2>
+      <p class="text-slate-400 mb-8">Feel free to reach out for collaborations, project inquiries, or full-time opportunities.</p>
+      
+      <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <a href="mailto:workwithnatann@gmail.com" class="px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition flex items-center gap-2 border border-slate-700 hover:border-cyan-500/50">
+          <i class="fa-solid fa-envelope text-cyan-400"></i> workwithnatann@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/nuryanda-sunanta-0415b5320/" target="_blank" class="px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition flex items-center gap-2 border border-slate-700 hover:border-cyan-500/50">
+          <i class="fa-brands fa-linkedin text-cyan-400"></i> LinkedIn
+        </a>
+        <a href="https://github.com/NATANKOBOII" target="_blank" class="px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white transition flex items-center gap-2 border border-slate-700 hover:border-cyan-500/50">
+          <i class="fa-brands fa-github text-cyan-400"></i> GitHub
+        </a>
+        <a href="https://wa.me/082125243537" target="_blank" class="px-5 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white transition flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp"></i> Direct WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-900 text-center text-slate-500 text-xs">
+    <p>© 2026 Nuryanda Sunanta.</p>
+  </footer>
+
+</body>
+</html>
